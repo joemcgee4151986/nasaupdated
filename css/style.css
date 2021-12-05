@@ -6,12 +6,32 @@
 *{
   box-sizing: border-box;
 }
-@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:768px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+@media screen and (max-width: 575px) {
+  .contenedor-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+  }
+}
+.alt{
+  display: block;
+  margin: 0 auto;
+}
+.title {
+  font-family: "Raleway", sans-serif;
+}
+
+.line {
+  line-height: 1.9em;
+  font-family: "Crimson Text", serif;
+}
+@media screen and ( max-width:770px){
+
+  .facebook-container{
+    width: 300px;
+  }
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -19,7 +39,7 @@ img{
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
 }
 h1 {
   font-size: smaller;
@@ -38,6 +58,13 @@ input{
   margin: 0 auto;
   display: block;
   align-content: center;
+}
+h1 {
+  
+  font-size: smaller;
+  
+  padding: 0px 700px;
+  
 }
 h2 {
   font-size: 15px;
