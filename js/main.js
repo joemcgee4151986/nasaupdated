@@ -1,4 +1,3 @@
-//The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
 document.querySelector('button').addEventListener('click',getPhotos)
 
 
@@ -18,6 +17,19 @@ function getPhotos(){
             document.querySelector('h3').innerText = data.explanation
    
 })
+
+let date = data["date"];
+let imageType = `
+        <div
+          class="bg-image hover-overlay ripple shadow-1-strong rounded"
+          data-ripple-color="light"
+        >
+          <img id="wrapper-image" src="" class="w-100" />
+          <a id="wrapper-hdurl" href="" target="_blank">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+          </a>
+        </div>
+		`
 .catch(err =>{
     console.log(`error ${err}`)
 })
